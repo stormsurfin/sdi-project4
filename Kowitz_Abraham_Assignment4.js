@@ -12,3 +12,14 @@ var s = function(str) {
 
 s("A,B,C,D,E");
 
+
+
+// Format a number to a specific number of decimal places
+
+/*Format a number to use a specific number of decimal places, as for money: 2.1 → 2.10 */
+
+var n = function(number){
+	var n = parseFloat(number);
+	console.log(n.toFixed(2));
+	};
+n(566.3456);
