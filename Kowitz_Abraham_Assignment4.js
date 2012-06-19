@@ -53,3 +53,20 @@ var gt = function(a){
 	};
 
 console.log(Math.min.apply(0,r.filter(gt, min)));
+
+
+/*Given an array of objects and the name of a key, 
+return the array sorted by the value of that key in each of the objects: 
+"a" + [{a:2},{a:3},{a:1}] → [{a:1},{a:2},{a:3}].*/
+
+var array = [655, 77, 190, 1, 2004];
+
+var sortArray = function(x,y){
+	return x - y;
+	};
+	
+console.log(array.sort(sortArray)); 
+
+
+/* the array is sorted based on the relationship 
+between each pair of elements and the return value.*/
