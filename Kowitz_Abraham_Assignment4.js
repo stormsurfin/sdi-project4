@@ -31,8 +31,8 @@ Number.prototype.isFuzzy = function(compare, percent){ // isFuzzy function compa
 var n = 151; // number to compare to
 console.log(n.isFuzzy(140,10)); // number compared, percentage
 
-/*Given a string version of a number such as "42", return the value as an actual Number, such as 42.*/
 
+/*Given a string version of a number such as "42", return the value as an actual Number, such as 42.*/
 
 var sn = function(stringNum){
 	var sn = (parseFloat(stringNum));
@@ -41,3 +41,15 @@ var sn = function(stringNum){
 	};
 	
 sn("9 years");
+
+
+/*Find the smallest value in an array that is greater than a given number*/
+
+var min = 9;
+var r = [4, 7, 12, 24];
+
+var gt = function(a){
+	return a>this; 
+	};
+
+console.log(Math.min.apply(0,r.filter(gt, min)));
