@@ -85,7 +85,7 @@ validate("980-980-0098");
 
 
 
-//  Detecting an email address
+/* Does a string follow an aaa@bbb.ccc pattern like an email address? */
 
 var detectEmail = function(m){
 	var atpos = m.indexOf("@");
@@ -99,7 +99,7 @@ var detectEmail = function(m){
 detectEmail("me@address.com");
 
 
-//Detect Url
+/* Is the string a URL? (Does it start with http: or https:?) */
 
 var ValidURL = function(url) {
 	var pattern = new RegExp('^(https?:\/\/)?'+  // checks for http:// or https://
@@ -117,3 +117,12 @@ var ValidURL = function(url) {
 
 ValidURL("www.address.com");
 
+/* Find the number of hours or days difference between two dates. */
+
+var daysBetween = function(date1String, date2String){
+	var d1 = new Date(date1String);
+	var d2 = new Date(date2String);
+	return (d2-d1)/(1000*3600*24);
+};
+
+console.log(daysBetween('1980-06-28', '2012-06-21'));
