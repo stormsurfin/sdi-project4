@@ -70,3 +70,17 @@ console.log(array.sort(sortArray));
 
 /* the array is sorted based on the relationship 
 between each pair of elements and the return value.*/
+
+////////////////////////
+
+// Detecting a phone number
+
+var validate = function(phone) {
+	var regex = (/^([0-9]{3})[-]?([0-9]{3})[-]?([0-9]{4})$/);
+	    if (regex.test(phone)) {
+	    console.log("Valid phone number.");
+		} else {
+		console.log("Invalid phone number.");
+	};
+}
+validate("980-980-0098");
