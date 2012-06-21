@@ -67,13 +67,11 @@ var sortArray = function(x,y){
 	
 console.log(array.sort(sortArray)); 
 
-
 /* the array is sorted based on the relationship 
 between each pair of elements and the return value.*/
 
-////////////////////////
 
-// Detecting a phone number
+/* Does a string follow a 123-456-7890 pattern like a phone number? */
 
 var validate = function(phone) {
 	var regex = (/^([0-9]{3})[-]?([0-9]{3})[-]?([0-9]{4})$/);
@@ -84,3 +82,20 @@ var validate = function(phone) {
 	};
 }
 validate("980-980-0098");
+
+
+
+//  Detecting an email address
+
+var detectEmail = function(m){
+	var atpos = m.indexOf("@");
+	var dotpos = m.lastIndexOf(".");
+		if (atpos<1 || dotpos<atpos+2 || dotpos+2>=m.length) { //checks for @ || checks for . || then checks for a second .
+			console.log("Not a valid e-mail address");
+			} else { 
+			console.log("Valid email address.");
+	};
+};
+detectEmail("me@address.com");
+
+
