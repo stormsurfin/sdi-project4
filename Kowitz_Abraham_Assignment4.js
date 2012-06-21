@@ -99,3 +99,21 @@ var detectEmail = function(m){
 detectEmail("me@address.com");
 
 
+//Detect Url
+
+var ValidURL = function(url) {
+	var pattern = new RegExp('^(https?:\/\/)?'+  // checks for http:// or https://
+	'((([a-z\d]([a-z\d-]*[a-z\d])*)\.)+[a-z]{2,}|'+ // checks for domain name sequence
+	'((\d{1,3}\.){3}\d{1,3}))'+ // checks for ip address
+	'(\:\d+)?(\/[-a-z\d%_.~+]*)*'+ // port number or path detection
+	'(\\?[;&a-z\d%_.~+=-]*)?'+  // detects a query string
+	'(\#[-a-z\d_]*)?$','i'); // recognizes # and its referring fragment
+	if(!pattern.test(url)) {
+		console.log("Not a valid URL.");
+		} else {
+		console.log("This is a valid web address.");
+		};
+	};
+
+ValidURL("www.address.com");
+
