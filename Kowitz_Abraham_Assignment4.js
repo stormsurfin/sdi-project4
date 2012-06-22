@@ -1,4 +1,11 @@
 var abelib = function() {
+
+	/* global variables  PROJECT 1 and 2 MAKEUP */
+	var separator = "A,B,C,D,E";
+	var decimal = 566.2346;
+	var years = "9 years";
+	var phoneNumber = "808-634-3003";
+	var webAddress = "www.fullsail.edu";
 	
 	/*Given a string that is a list of things separated by a given string, 
 	as well as another string separator, 
@@ -6,12 +13,12 @@ var abelib = function() {
 	"a,b,c" + "," + "/" → "a/b/c".*/
 	
 	var s = function(str){
-		var s = str.replace(/,/g,"/"); // uses .replace to change , to /
+		var s = str.replace(/,/g,"/"); // PROJECT 1 MAKE UP: array method use .replace to change , to /
 		console.log(s);
-		return s;
+		return s;  // PROJECT 2 MAKE UP: using a return in a function
 		};
 	
-	s("A,B,C,D,E");
+	s(separator);   // PROJECT 2 MAKEUP: calling function
 	
 	
 	/*Format a number to use a specific number of decimal places, as for money: 2.1 → 2.10 */
@@ -21,7 +28,7 @@ var abelib = function() {
 		console.log(n.toFixed(2));
 		};
 		
-	n(566.3456);
+	n(decimal);  // PROJECT 2 MAKEUP: calling function
 		
 		
 	/*Fuzzy-match a number: is the number above or below a number within a certain percent?*/
@@ -31,7 +38,8 @@ var abelib = function() {
 		return n >= compare-dev && n <= compare+dev;
 	};
 	var n = 151; // number to compare to
-	console.log(n.isFuzzy(140,10)); // number compared, percentage
+	console.log(n.isFuzzy(140,10)); // number compared, percentage  
+	// PROJECT 1 MAKEUP: output variable to console
 	
 	
 	/*Given a string version of a number such as "42", return the value as an actual Number, such as 42.*/
@@ -39,10 +47,10 @@ var abelib = function() {
 	var sn = function(stringNum){
 		var sn = (parseFloat(stringNum));
 		console.log(sn);
-		return sn;
+		return sn;  // PROJECT 2 MAKE UP: using a return in a function
 		};
 		
-	sn("9 years");
+	sn(years);  // PROJECT 2 MAKEUP: calling function
 	
 	
 	/*Find the smallest value in an array that is greater than a given number*/
@@ -51,10 +59,10 @@ var abelib = function() {
 	var r = [4, 7, 12, 24];
 	
 	var gt = function(a){
-		return a > this; 
+		return a > this;   // PROJECT 2 MAKE UP: using a return in a function
 		};
 	
-	console.log(Math.min.apply(0,r.filter(gt, min)));
+	console.log(Math.min.apply(0,r.filter(gt, min)));      // PROJECT 1 MAKEUP: output variable to console
 	
 	
 	/*Given an array of objects and the name of a key, 
@@ -64,7 +72,7 @@ var abelib = function() {
 	var array = [655, 77, 190, 1, 2004];
 	
 	var sortArray = function(x,y){
-		return x - y;
+		return x - y;  // PROJECT 2 MAKE UP: using a return in a function
 		};
 		
 	console.log(array.sort(sortArray)); 
@@ -84,7 +92,7 @@ var abelib = function() {
 			console.log("Invalid phone number.");
 		};
 	}
-	validate("980-980-0098");
+	validate(phoneNumber);   // PROJECT 2 MAKEUP: calling function
 	
 	
 	
@@ -99,7 +107,7 @@ var abelib = function() {
 				console.log("Valid email address.");
 		};
 	};
-	detectEmail("me@address.com");
+	detectEmail("me@address.com");   // PROJECT 2 MAKEUP: calling function
 	
 	
 	/* Is the string a URL? (Does it start with http: or https:?) */
@@ -118,7 +126,7 @@ var abelib = function() {
 			};
 		};
 	
-	ValidURL("www.address.com");
+	ValidURL(webAddress);
 	
 	/* Find the number of hours or days difference between two dates. */
 	
@@ -128,7 +136,7 @@ var abelib = function() {
 		return (d2-d1)/(1000*3600*24);
 	};
 	
-	console.log(daysBetween('1980-06-28', '2012-06-21'));
+	console.log(daysBetween('1980-06-28', '2012-06-21'));   // PROJECT 1 MAKEUP: output variable to console
 	
 	/* Title-case a string (split into words, then uppercase the first letter of each word) */
 	
@@ -136,7 +144,7 @@ var abelib = function() {
 		return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 	};
 	
-	"scalable data infrastructures".toTitleCase();
+	"scalable data infrastructures".toTitleCase();   // PROJECT 2 MAKEUP: calling function
 	
 	
 	
@@ -157,3 +165,5 @@ var abelib = function() {
 };
 
 abelib();
+
+console.log('I was under the assumption that a string with an escape is where there\'s a character that needs to be displayed as typed and not used as a part of code.  I did have this in project 1!');
